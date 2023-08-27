@@ -1,0 +1,90 @@
+﻿@{
+    ViewData["Title"] = "Comments";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@using FA.JustBlog.Repository.Infrastructures;
+@inject IUnitOfWork uow;
+
+@{
+    var posts = uow.PostRepository.GetAll();
+}
+
+
+<!-- Main content -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <a class="btn btn-success" href="@Url.Action("Create", "Comment", new {area="Admin"})">Create</a>
+                </div>
+                <!-- /.card-header -->
+                <div id="example1" class="card-body">
+                    <form>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Comment name</th>
+                                    <th>Email</th>
+                                    <th>Post Title</th>
+                                    <th>CommentHeader</th>
+                                    <th>CommentText</th>
+                                    <th>CommentTime</th>
+                                    <th>Operations</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    var index = 1;
+                                }
+                                @foreach (var item in Model)
+                                {
+                                    var postFind = @posts.FirstOrDefault(p => p.Id == @item.PostId);
+                                    <tr>
+                                        <td>@index</td>
+                                        <td>@item.Name</td>
+                                        <td>@item.Email</td>
+                                        <td>@postFind.Title</td>
+                                        <td>@item.CommentHeader</td>
+                                        <td>@item.CommentText</td>
+                                        <td>@item.CommentTime</td>
+                                        <td>
+                                            <button type="submit" class="btn btn-primary" asp-action="Detail" asp-controller="Comment" asp-area="Admin" asp-route-id="@item.Id">Detail</button>
+                                            <button type="submit" class="btn btn-warning" asp-action="Edit" asp-controller="Comment" asp-area="Admin" asp-route-id="@item.Id">Edit</button>
+                                            <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Comment" asp-area="Admin" asp-route-id="@item.Id">Delete</button>
+                                        </td>
+                                    </tr>
+                                    index++;
+
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Comment name</th>
+                                    <th>Email</th>
+                                    <th>Post Title</th>
+                                    <th>CommentHeader</th>
+                                    <th>CommentText</th>
+                                    <th>CommentTime</th>
+                                    <th>Operations</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </form>
+                    <div id="pagination" class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase">Next page → </a></div>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container-fluid -->
+<script src="~/js/paggingData.js"></script>
+
+
+

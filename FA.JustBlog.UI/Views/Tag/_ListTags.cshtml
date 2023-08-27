@@ -1,0 +1,26 @@
+﻿@using FA.JustBlog.Core.Models;
+@using FA.JustBlog.Repository.Infrastructures;
+@inject IUnitOfWork uow;
+@{
+    var tags = uow.TagRepository.GetAll();
+}
+
+<partial name="_PartialNugetRight" />
+
+@*@if (tags != null)
+{
+    @foreach (var item in tags)
+    {
+        <!-- Post preview-->
+        <div class="post-preview">
+            <a asp-action="GetPostsByTag" asp-controller="Post" asp-route-name="@item.Name">
+                <h2 class="post-title">@item.Name</h2>
+                <h3 class="post-subtitle">@item.Description</h3>
+            </a>
+        </div>
+        <!-- Divider-->
+        <hr class="my-4" />
+    }
+}*@
+
+

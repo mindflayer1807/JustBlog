@@ -1,0 +1,61 @@
+﻿@using FA.JustBlog.Core.Models;
+@using FA.JustBlog.Repository.Infrastructures;
+@inject IUnitOfWork uow;
+@{
+    var categories = uow.CategoryRepository.GetAll();
+    var tags = uow.TagRepository.GetAll();
+    //List<Category> categories = new List<Category>(ViewBag.Categories);
+}
+
+<nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" asp-action="Index" asp-controller="Home">JustBlog</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" asp-action="Index" asp-controller="Home">Home</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" asp-action="Index" asp-controller="Post">Posts</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" asp-action="Index" asp-controller="GalleryImage">Gallery Images</a></li>
+
+                @if (categories != null && categories.Count() > 0)
+                {
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 1.5rem 1rem">
+                            Categories
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                            <a class="dropdown-item" href="@Url.Action("Index", "Category")">All cateogries</a>
+                            @foreach (var item in categories)
+                            {
+                                <a class="dropdown-item" href="@Url.Action("GetPostsByCategory", "Post", new { name = item.Name })">@item.Name</a>
+                            }
+                        </div>
+                    </li>
+                }
+
+                @if (tags != null && tags.Count() > 0)
+                {
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 1.5rem 1rem">
+                            Tags
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                            <a class="dropdown-item" href="@Url.Action("Index", "Tag")">All tags</a>
+                            @foreach (var item in tags)
+                            {
+                                <a class="dropdown-item" href="@Url.Action("GetPostsByTag", "Post", new { name = item.Name })">@item.Name</a>
+                            }
+                        </div>
+                    </li>
+                }
+
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" asp-action="About" asp-controller="Home">About</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" asp-action="Contact" asp-controller="Home">Contact</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="@Url.Action("Index","Home", new {area="Admin"})">Admin</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

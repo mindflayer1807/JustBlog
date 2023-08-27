@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewData["Title"] = "Tags";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<!-- Main content -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <a class="btn btn-success" href="@Url.Action("Create", "Tag", new {area="Admin"})">Create</a>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <form action="">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Tag name</th>
+                                    <th>UrlSlug</th>
+                                    <th>Description</th>
+                                    <th>Count</th>
+                                    <th>Operations</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    var index = 1;
+                                }
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@index</td>
+                                        <td>@item.Name</td>
+                                        <td>@item.UrlSlug</td>
+                                        <td>@item.Description</td>
+                                        <td>@item.Count</td>
+                                        <td>
+                                            <button type="submit" class="btn btn-primary" asp-action="Detail" asp-controller="Tag" asp-area="Admin" asp-route-id="@item.Id">Detail</button>
+                                            <button type="submit" class="btn btn-warning" asp-action="Edit" asp-controller="Tag" asp-area="Admin" asp-route-id="@item.Id">Edit</button>
+                                            <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Tag" asp-area="Admin" asp-route-id="@item.Id">Delete</button>
+                                        </td>
+                                    </tr>
+                                    index++;
+
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Tag name</th>
+                                    <th>UrlSlug</th>
+                                    <th>Description</th>
+                                    <th>Count</th>
+                                    <th>Operations</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </form>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container-fluid -->
+
+<script>
+    $(function () {
+        $("#example1").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });
+</script>
+

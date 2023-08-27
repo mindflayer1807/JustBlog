@@ -1,0 +1,72 @@
+﻿@model FA.JustBlog.Core.Models.GalleryImage
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@using FA.JustBlog.Repository.Infrastructures;
+@inject IUnitOfWork uow;
+
+@{
+    var posts = uow.PostRepository.GetAll();
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+            <div class="card card-success">
+                <div class="card-header">
+                    <h3 class="card-title">Create a Image</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form role="form" asp-action="Create">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label asp-for="Title" class="control-label"></label>
+                            <input asp-for="Title" class="form-control" />
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Description" class="control-label"></label>
+                            <input asp-for="Description" class="form-control" />
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ImageUrl" class="control-label"></label>
+                            <input asp-for="ImageUrl" class="form-control" />
+                            <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CreatedDate" class="control-label"></label>
+                            <input asp-for="CreatedDate" class="form-control" />
+                            <span asp-validation-for="CreatedDate" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CreatedBy" class="control-label"></label>
+                            <input asp-for="CreatedBy" class="form-control" />
+                            <span asp-validation-for="CreatedBy" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PostId">Post</label>
+                            <select asp-for="PostId" class="form-control">
+                                @foreach (var item in posts)
+                                {
+                                    <option value="@item.Id">@item.Title</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-success">Create</button>
+                        <button asp-action="Images" asp-controller="Image" type="submit" class="btn btn-default float-right">Back to list</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

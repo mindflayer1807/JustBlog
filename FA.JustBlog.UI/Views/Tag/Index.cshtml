@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using FA.JustBlog.Core.Models;
+@using FA.JustBlog.Repository.Infrastructures;
+
+@inject IUnitOfWork uow;
+@{
+    var tags = uow.TagRepository.GetAll();
+}
+
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-9">
+            <h1 class="post-title">All Tags</h1>
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                @if (tags != null && tags.Count() > 0)
+                {
+                    @foreach (var item in tags)
+                    {
+                        <!-- Post preview-->
+                        <div class="post-preview">
+                            <a asp-action="GetPostsByTag" asp-controller="Post" asp-route-name="@item.Name">
+                                <h2 class="post-title">@item.Name</h2>
+                                <h3 class="post-subtitle">@item.Description</h3>
+                            </a>
+                            <!-- Divider-->
+                            <hr class="my-4" />
+                        </div>
+                    }
+                }
+                <!-- Pager-->
+                <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Next Tags →</a></div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="row">
+                <partial name="_ListTags.cshtml" />
+            </div>
+        </div>
+    </div>
+</div>
+

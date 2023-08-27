@@ -1,0 +1,117 @@
+﻿@model FA.JustBlog.Core.Models.Post
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@using FA.JustBlog.Repository.Infrastructures;
+@inject IUnitOfWork uow;
+
+@{
+    var categories = uow.CategoryRepository.GetAll();
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+            <div class="card card-warning">
+                <div class="card-header">
+                    <h3 class="card-title">Edit for post</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form role="form" asp-action="Edit">
+                    <div class="card-body">
+                        <input type="hidden" asp-for="Id" />
+                        <div class="form-group">
+                            <label asp-for="Title" class="control-label"></label>
+                            <input asp-for="Title" class="form-control" />
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ShortDescription" class="control-label"></label>
+                            <input asp-for="ShortDescription" class="form-control" />
+                            <span asp-validation-for="ShortDescription" class="text-danger"></span>
+                        </div>
+                        <div form-group>
+                            <label asp-for="PostContent" class="control-label"></label>
+                            <textarea asp-for="PostContent" style="width: 100%">@Model.PostContent</textarea>
+                            <span asp-validation-for="PostContent" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="UrlSlug" class="control-label"></label>
+                            <input asp-for="UrlSlug" class="form-control" />
+                            <span asp-validation-for="UrlSlug" class="text-danger"></span>
+                        </div>
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="Published" /> @Html.DisplayNameFor(model => model.Published)
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PostedOn" class="control-label"></label>
+                            <input asp-for="PostedOn" class="form-control" />
+                            <span asp-validation-for="PostedOn" class="text-danger"></span>
+                        </div>
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="Modified" /> @Html.DisplayNameFor(model => model.Modified)
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ViewCount" class="control-label"></label>
+                            <input asp-for="ViewCount" class="form-control" />
+                            <span asp-validation-for="ViewCount" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="RateCount" class="control-label"></label>
+                            <input asp-for="RateCount" class="form-control" />
+                            <span asp-validation-for="RateCount" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="TotalRate" class="control-label"></label>
+                            <input asp-for="TotalRate" class="form-control" />
+                            <span asp-validation-for="TotalRate" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CategoryId">Category</label>
+                            <select asp-for="CategoryId" class="form-control">
+                                @foreach (var item in categories)
+                                {
+                                    <option value="@item.Id">@item.Name</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-warning">Save</button>
+                        <button asp-action="Posts" asp-controller="Post" type="submit" class="btn btn-default float-right">Back to list</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor1'))
+        .then(editor => {
+            editor.setData('@Html.Raw(Model.PostContent)');
+
+            editor.model.document.on('change:data', () => {
+                const content = editor.getData();
+                document.querySelector('#Content').value = content;
+            });
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>
+
+
+

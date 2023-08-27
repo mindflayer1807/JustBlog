@@ -1,0 +1,69 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using FA.JustBlog.Core.Models;
+@using FA.JustBlog.Repository.Infrastructures;
+
+@inject IUnitOfWork uow;
+@{
+    var images = uow.GalleryImageRepository.GetAll();
+    var posts = uow.PostRepository.GetAll();
+}
+
+<div class="justify-content-center">
+    <div class="row" id="imageGallery">
+
+        @if (images != null && images.Count() > 0)
+        {
+            @foreach (var item in Model)
+            {
+                @*var post = @posts.FirstOrDefault(p => p.Id == @item.PostId);*@
+                @*<a asp-action="Detail" asp-controller="Post" asp-route-year="@post.PostedOn.Year" asp-route-month="@post.PostedOn.Month" asp-route-title="@post.Title">*@
+                    <div class="col-md-4">
+                        <div class="galleryhome">
+                            <img class="myImg" src="@Url.Content(item.ImageUrl)" alt="@item.Title" width="600" height="400">
+                            <div class="desc">@item.Description</div>
+
+                            <!-- The Modal -->
+                            <div id="myModal" class="modal">
+                                <img class="modal-content" id="img01">
+                                <div id="caption"></div>
+                            </div>
+                        </div>
+                    </div>
+                @*</a>*@
+            }
+        }
+    </div>
+
+    <!-- Pager -->
+    <div id="pagination" class="d-flex justify-content-center">
+        <a class="btn btn-primary text-uppercase" id="pageImagesLink">Next page →</a>
+    </div>
+</div>
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the images and insert them inside the modal - use their "alt" text as captions
+    var images = document.getElementsByClassName("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+
+    for (var i = 0; i < images.length; i++) {
+        images[i].onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    }
+
+    // Close the modal when clicking anywhere on the screen
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>

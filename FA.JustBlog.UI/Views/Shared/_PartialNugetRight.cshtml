@@ -1,0 +1,50 @@
+﻿@using FA.JustBlog.Repository.Infrastructures;
+@inject IUnitOfWork uow;
+@{
+    var categories = uow.CategoryRepository.GetAll();
+    var tags = uow.TagRepository.GetAll();
+}
+
+<div class="col-3 .row img">
+    <div class="post-preview">
+        <a asp-action="About" asp-controller="Home">
+            <div class="gallery">
+                <img src="~/assets/img/about-bg.jpg" alt="about me image" width="600" height="400">
+                <div class="desc">
+                    <h1>About me!</h1>
+                    <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    @*<hr style="backface-visibility"/>*@
+</div>
+<hr class="my-4" />
+<div class="col-3 .row img">
+    <div class="post-preview">
+        <a href="@Url.Action("Index", "Tag")">
+            <h1>Tags</h1>
+        </a>
+        @foreach (var item in tags)
+        {
+            <a href="@Url.Action("GetPostsByTag", "Post", new { name = item.Name })">
+                <span class="tag-item">@item.Name</span>
+            </a>
+        }
+    </div>
+</div>
+<hr class="my-4" />
+<div class="col-3 .row img">
+    <div class="post-preview">
+        <a href="@Url.Action("Index", "Category")">
+            <h1>Categoties</h1>
+        </a>
+        @foreach (var item in categories)
+        {
+            <a href="@Url.Action("GetPostsByCategory", "Post", new { name = item.Name })">
+                <span class="tag-item">@item.Name</span>
+            </a>
+        }
+    </div>
+</div>
+<hr class="my-4" />

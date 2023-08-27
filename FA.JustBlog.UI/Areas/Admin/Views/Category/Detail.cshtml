@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Detail category</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form role="form" asp-action="edit" asp-route-id="@Model.Id">
+                    <div class="card-body">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th>Name</th>
+                                    <td><input class="form-control" placeholder="@Model.Name"></td>
+                                </tr>
+                                <tr>
+                                    <th>UrlSlug</th>
+                                    <td><input class="form-control" placeholder="@Model.UrlSlug"></td>
+                                </tr>
+                                <tr>
+                                    <th>Description</th>
+                                    <td><input class="form-control" placeholder="@Model.Description"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+
+                    <div class="card-footer">
+                        <button asp-action="Categories" asp-controller="Category" type="submit" class="btn btn-default float-right">Back to list</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

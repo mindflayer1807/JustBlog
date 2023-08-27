@@ -1,0 +1,45 @@
+﻿@using FA.JustBlog.Core.Models;
+@model List<Post>;
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-9">
+            <h1 class="post-title">All posts!</h1>
+            <div class="col-md-10 col-lg-8 col-xl-10">
+                @if (Model != null && Model.Count > 0)
+                {
+                    @foreach (var item in Model)
+                    {
+                        <!-- Post preview-->
+                        <div class="post-preview">
+                            <a asp-action="Detail" asp-controller="Post" asp-route-year="@item.PostedOn.Year" asp-route-month="@item.PostedOn.Month" asp-route-title="@item.Title">
+                                <h2 class="post-title">@item.Title</h2>
+                                <h3 class="post-subtitle">@item.ShortDescription</h3>
+                            </a>
+                            <p class="post-meta">
+                                @TimeHelper.GetTimePostAgo(item)
+                            </p>
+                            <!-- Divider-->
+                            <hr class="my-4" />
+                        </div>
+                    }
+                }
+                <!-- Pager-->
+                <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Next Posts →</a></div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="row">
+                <partial name="_ListPosts.cshtml" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "LatestPosts";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Latest Posts</h2>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <form action="">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Title</th>
+                                    <th>Short Description</th>
+                                    <th>Operations</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    var index = 1;
+                                }
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@index</td>
+                                        <td>@item.Title</td>
+                                        <td>@item.ShortDescription</td>
+                                        <td>
+                                            <button type="submit" class="btn btn-primary" asp-action="Detail" asp-controller="Post" asp-area="Admin" asp-route-id="@item.Id">Detail</button>
+                                            <button type="submit" class="btn btn-warning" asp-action="Edit" asp-controller="Post" asp-area="Admin" asp-route-id="@item.Id">Edit</button>
+                                            <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Post" asp-area="Admin" asp-route-id="@item.Id">Delete</button>
+                                        </td>
+                                    </tr>
+                                    index++;
+
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Title</th>
+                                    <th>Short Description</th>
+                                    <th>Operations</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </form>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container-fluid -->
+
+<script>
+    $(function () {
+        $("#example1").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });
+</script>
+

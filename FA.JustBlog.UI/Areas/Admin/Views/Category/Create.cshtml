@@ -1,0 +1,47 @@
+﻿@model FA.JustBlog.Core.Models.Category
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+            <div class="card card-success">
+                <div class="card-header">
+                    <h3 class="card-title">Create a category</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form role="form" asp-action="Create">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label asp-for="Name" for="exampleInputFile"></label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="UrlSlug" class="control-label"></label>
+                            <input asp-for="UrlSlug" class="form-control" />
+                            <span asp-validation-for="UrlSlug" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Description" class="control-label"></label>
+                            <input asp-for="Description" class="form-control" />
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-success">Create</button>
+                        <button asp-action="Categories" asp-controller="Category" type="submit" class="btn btn-default float-right">Back to list</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

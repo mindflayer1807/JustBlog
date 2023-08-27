@@ -1,0 +1,25 @@
+﻿@using FA.JustBlog.Core.Models;
+@model List<Post>;
+
+<div>
+    <h1>Most viewed posts!</h1>
+    @if (Model != null && Model.Count > 0)
+    {
+        @foreach (var item in Model)
+        {
+            <!-- Post preview-->
+            <div class="post-preview">
+                <a asp-action="Detail" asp-controller="Post" asp-route-year="@item.PostedOn.Year" asp-route-month="@item.PostedOn.Month" asp-route-title="@item.Title">
+                    <h2 class="post-title">@item.Title</h2>
+                    <h3 class="post-subtitle">@item.ShortDescription</h3>
+                </a>
+                <p class="post-meta">
+                    @TimeHelper.GetTimePostAgo(item)
+                </p>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+        }
+    }
+</div>
+

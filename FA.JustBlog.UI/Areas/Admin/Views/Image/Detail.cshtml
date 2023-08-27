@@ -1,0 +1,68 @@
+﻿@model FA.JustBlog.Core.Models.GalleryImage
+
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="container-fluid">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Detail comment</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form role="form" asp-action="edit" asp-route-id="@Model.Id">
+                    <dl class="card-body">
+                        <table class="table">
+                        <dt class="col-sm-2">
+                                @Html.DisplayNameFor(model => model.Title)
+                        </dt>
+                        <dd class="col-sm-10">
+                                @Html.DisplayFor(model => model.Title)
+                        </dd>
+                        <dt class="col-sm-2">
+                                @Html.DisplayNameFor(model => model.Description)
+                        </dt>
+                        <dd class="col-sm-10">
+                                @Html.DisplayFor(model => model.Description)
+                        </dd>
+                        <dt class="col-sm-2">
+                                @Html.DisplayNameFor(model => model.ImageUrl)
+                        </dt>
+                        <dd class="col-sm-10">
+                                @Html.DisplayFor(model => model.ImageUrl)
+                        </dd>
+                        <dt class="col-sm-2">
+                                @Html.DisplayNameFor(model => model.CreatedDate)
+                        </dt>
+                        <dd class="col-sm-10">
+                                @Html.DisplayFor(model => model.CreatedDate)
+                        </dd>
+                        <dt class="col-sm-2">
+                                @Html.DisplayNameFor(model => model.CreatedBy)
+                        </dt>
+                        <dd class="col-sm-10">
+                                @Html.DisplayFor(model => model.CreatedBy)
+                        </dd>
+                        <dt class="col-sm-2">
+                                @Html.DisplayNameFor(model => model.Post)
+                        </dt>
+                        <dd class="col-sm-10">
+                                @Html.DisplayFor(model => model.Post.ShortDescription)
+                        </dd>
+                        </table>
+                    </dl>
+                    <!-- /.card-body -->
+
+                    <div class="card-footer">
+                        <button asp-action="Images" asp-controller="Image" type="submit" class="btn btn-default float-right">Back to list</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,233 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = FA.JustBlog.UI
+build_property.RootNamespace = FA.JustBlog.UI
+build_property.ProjectDir = C:\Users\redoc\Desktop\FSoft Assignment\05. MVC\webjustblog-master\webjustblog-master\FA.JustBlog.UI\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\redoc\Desktop\FSoft Assignment\05. MVC\webjustblog-master\webjustblog-master\FA.JustBlog.UI
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Category/Categories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcQ2F0ZWdvcmllcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Category/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Category/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Category/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Category/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Comment/Comments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tbWVudFxDb21tZW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Comment/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tbWVudFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Comment/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tbWVudFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Comment/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tbWVudFxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Comment/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tbWVudFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Image/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW1hZ2VcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Image/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW1hZ2VcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Image/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW1hZ2VcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Image/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW1hZ2VcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Image/Images.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW1hZ2VcSW1hZ2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Post/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Post/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Post/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdFxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Post/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Post/LatestPosts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdFxMYXRlc3RQb3N0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Post/Posts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdFxQb3N0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Tag/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Tag/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Tag/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Tag/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/Tag/Tags.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXFRhZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/Category/_ListCategories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcX0xpc3RDYXRlZ29yaWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/GalleryImage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FsbGVyeUltYWdlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/Post/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/Post/GetPostsByCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFxHZXRQb3N0c0J5Q2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/Post/GetPostsByTag.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFxHZXRQb3N0c0J5VGFnLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/Post/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/Post/LatestPostsinside.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFxMYXRlc3RQb3N0c2luc2lkZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/Post/MostViewedPosts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFxNb3N0Vmlld2VkUG9zdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/Post/_ListPosts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFxfTGlzdFBvc3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/Shared/_PartialFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsRm9vdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/Shared/_PartialNavigation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsTmF2aWdhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/Shared/_PartialNugetRight.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXJ0aWFsTnVnZXRSaWdodC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/Tag/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/Tag/_ListTags.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnXF9MaXN0VGFncy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/redoc/Desktop/FSoft Assignment/05. MVC/webjustblog-master/webjustblog-master/FA.JustBlog.UI/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-t9vh283v6h

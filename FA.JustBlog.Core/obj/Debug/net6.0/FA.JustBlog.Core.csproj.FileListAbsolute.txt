@@ -1,0 +1,14 @@
+C:\Users\redoc\Desktop\FSoft Assignment\05. MVC\webjustblog-master\webjustblog-master\FA.JustBlog.Core\bin\Debug\net6.0\FA.JustBlog.Core.deps.json
+C:\Users\redoc\Desktop\FSoft Assignment\05. MVC\webjustblog-master\webjustblog-master\FA.JustBlog.Core\bin\Debug\net6.0\FA.JustBlog.Core.runtimeconfig.json
+C:\Users\redoc\Desktop\FSoft Assignment\05. MVC\webjustblog-master\webjustblog-master\FA.JustBlog.Core\bin\Debug\net6.0\FA.JustBlog.Core.dll
+C:\Users\redoc\Desktop\FSoft Assignment\05. MVC\webjustblog-master\webjustblog-master\FA.JustBlog.Core\bin\Debug\net6.0\FA.JustBlog.Core.pdb
+C:\Users\redoc\Desktop\FSoft Assignment\05. MVC\webjustblog-master\webjustblog-master\FA.JustBlog.Core\obj\Debug\net6.0\FA.JustBlog.Core.csproj.AssemblyReference.cache
+C:\Users\redoc\Desktop\FSoft Assignment\05. MVC\webjustblog-master\webjustblog-master\FA.JustBlog.Core\obj\Debug\net6.0\FA.JustBlog.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\redoc\Desktop\FSoft Assignment\05. MVC\webjustblog-master\webjustblog-master\FA.JustBlog.Core\obj\Debug\net6.0\FA.JustBlog.Core.AssemblyInfoInputs.cache
+C:\Users\redoc\Desktop\FSoft Assignment\05. MVC\webjustblog-master\webjustblog-master\FA.JustBlog.Core\obj\Debug\net6.0\FA.JustBlog.Core.AssemblyInfo.cs
+C:\Users\redoc\Desktop\FSoft Assignment\05. MVC\webjustblog-master\webjustblog-master\FA.JustBlog.Core\obj\Debug\net6.0\FA.JustBlog.Core.csproj.CoreCompileInputs.cache
+C:\Users\redoc\Desktop\FSoft Assignment\05. MVC\webjustblog-master\webjustblog-master\FA.JustBlog.Core\obj\Debug\net6.0\FA.JustBlog.Core.dll
+C:\Users\redoc\Desktop\FSoft Assignment\05. MVC\webjustblog-master\webjustblog-master\FA.JustBlog.Core\obj\Debug\net6.0\refint\FA.JustBlog.Core.dll
+C:\Users\redoc\Desktop\FSoft Assignment\05. MVC\webjustblog-master\webjustblog-master\FA.JustBlog.Core\obj\Debug\net6.0\FA.JustBlog.Core.pdb
+C:\Users\redoc\Desktop\FSoft Assignment\05. MVC\webjustblog-master\webjustblog-master\FA.JustBlog.Core\obj\Debug\net6.0\FA.JustBlog.Core.genruntimeconfig.cache
+C:\Users\redoc\Desktop\FSoft Assignment\05. MVC\webjustblog-master\webjustblog-master\FA.JustBlog.Core\obj\Debug\net6.0\ref\FA.JustBlog.Core.dll

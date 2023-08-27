@@ -1,0 +1,57 @@
+﻿@using FA.JustBlog.Core.Models;
+@using FA.JustBlog.Repository.Infrastructures;
+@inject IUnitOfWork uow;
+
+@{
+    var mostViewedPosts = uow.PostRepository.GetMostViewedPost(2);
+    var latestPosts = uow.PostRepository.LatestPosts();
+    var tags = uow.TagRepository.GetAll();
+}
+
+<partial name="_PartialNugetRight" />
+
+@*most viewed posts*@
+<div >
+    <h1>Most viewed posts!</h1>
+    @if (mostViewedPosts != null && mostViewedPosts.Count() > 0)
+    {
+        @foreach (var item in mostViewedPosts)
+        {
+            <!-- Post preview-->
+            <div class="post-preview">
+                <a asp-action="Detail" asp-controller="Post" asp-route-year="@item.PostedOn.Year" asp-route-month="@item.PostedOn.Month" asp-route-title="@item.Title">
+                    <h2 class="post-title">@item.Title</h2>
+                    <h3 class="post-subtitle">@item.ShortDescription</h3>
+                </a>
+                <p class="post-meta">
+                    @TimeHelper.GetTimePostAgo(item)
+                </p>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+        }
+    }
+</div>
+@*Latest posts inside*@
+<div>
+    <h1>Latest posts inside!</h1>
+    @if (latestPosts != null && latestPosts.Count > 0)
+    {
+        @foreach (var item in latestPosts)
+        {
+            <!-- Post preview-->
+            <div class="post-preview">
+                <a asp-action="Detail" asp-controller="Post" asp-route-year="@item.PostedOn.Year" asp-route-month="@item.PostedOn.Month" asp-route-title="@item.Title">
+                    <h2 class="post-title">@item.Title</h2>
+                    <h3 class="post-subtitle">@item.ShortDescription</h3>
+                </a>
+                <p class="post-meta">
+                    @TimeHelper.GetTimePostAgo(item)
+                </p>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+        }
+    }
+</div>
+

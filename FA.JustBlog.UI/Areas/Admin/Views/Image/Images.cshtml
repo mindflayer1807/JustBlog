@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewData["Title"] = "Images";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@using FA.JustBlog.Repository.Infrastructures;
+@inject IUnitOfWork uow;
+
+@{
+    var posts = uow.PostRepository.GetAll();
+}
+
+
+<!-- Main content -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <a class="btn btn-success" href="@Url.Action("Create", "Image", new {area="Admin"})">Create</a>
+                </div>
+                <!-- /.card-header -->
+                <div id="example1" class="card-body">
+                    <form>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Title</th>
+                                    <th>Description</th>
+                                    <th>ImageUrl</th>
+                                    <th>CreatedDate</th>
+                                    <th>CreatedBy</th>
+                                    <th>Post Title</th>
+                                    <th>Operations</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    var index = 1;
+                                }
+                                @foreach (var item in Model)
+                                {
+                                    var postFind = @posts.FirstOrDefault(p => p.Id == @item.PostId);
+                                    <tr>
+                                        <td>@index</td>
+                                        <td>@item.Title</td>
+                                        <td>@item.Description</td>
+                                        <td>@item.ImageUrl</td>
+                                        <td>@item.CreatedDate</td>
+                                        <td>@item.CreatedBy</td>
+                                        <td>@postFind.Title</td>
+                                        <td>
+                                            <button type="submit" class="btn btn-primary" asp-action="Detail" asp-controller="Image" asp-area="Admin" asp-route-id="@item.Id">Detail</button>
+                                            <button type="submit" class="btn btn-warning" asp-action="Edit" asp-controller="Image" asp-area="Admin" asp-route-id="@item.Id">Edit</button>
+                                            <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Image" asp-area="Admin" asp-route-id="@item.Id">Delete</button>
+                                        </td>
+                                    </tr>
+                                    index++;
+
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Title</th>
+                                    <th>Description</th>
+                                    <th>ImageUrl</th>
+                                    <th>CreatedDate</th>
+                                    <th>CreatedBy</th>
+                                    <th>Post Title</th>
+                                    <th>Operations</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </form>
+                    <div id="pagination" class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase">Next page → </a></div>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container-fluid -->
+<script src="~/js/paggingData.js"></script>
+
+
+
+
+

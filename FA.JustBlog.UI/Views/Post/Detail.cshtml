@@ -1,0 +1,123 @@
+﻿@using FA.JustBlog.Core.Models;
+@using FA.JustBlog.Repository.Infrastructures;
+@inject IUnitOfWork uow;
+
+
+@model Post
+@{
+    var categories = uow.CategoryRepository.GetAll();
+    var postTitle = Model.Title;
+    var comments = uow.CommentRepository.GetCommentsForPost(postTitle);
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>@Model.Title</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    @*<script src="~/js/commentInput.js"></script>*@
+
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="~/css/styles.css" rel="stylesheet" />
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyWp4sF1B8n3+3W3MxBUvmfR6qU7whvM2vB7j+6pDQJl3Dj3fU+uOTL3D5Fb3Y1J" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"></script>
+</head>
+<body>
+    <!-- Navigation-->
+    <partial name="/Views/Shared/_PartialNavigation.cshtml" />
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url('/assets/img/post-bg.jpg')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="post-heading">
+                        <h1>@Model.Title</h1>
+                        <h2 class="subheading">@Model.ShortDescription</h2>
+                        <span class="meta">
+                            @TimeHelper.GetTimePostAgo(Model);
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Post Content-->
+    <article class="mb-4">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <p>@Model.PostContent</p>
+                </div>
+            </div>
+        </div>
+    </article>
+    @*comment*@
+    <!-- Form Comments-->
+    <div class="container mt-5 mb-5">
+        <div class="d-flex justify-content-center row">
+            <div class="d-flex flex-column col-md-8">
+                <div class="coment-bottom bg-white p-2 px-4">
+                    <div class="d-flex flex-row add-comment-section mt-4 mb-4">
+                        <img class="img-fluid img-responsive rounded-circle mr-2" src="~/assets/img/shinsuit.jpg" width="38">
+
+                        @Html.HiddenFor(x => x.Id, new {id = "post-id"})
+                        <input id="name" name="name" type="text" class="form-control mr-3" placeholder="Add name comment">
+                        <input id="commentTime" hidden="hidden" type="text" class="form-control mr-3" placeholder="Add commentTime">
+                        <input id="email" name="email" type="text" class="form-control mr-3" placeholder="Add email">
+                        <input id="commentHeader" type="text" class="form-control mr-3" placeholder="Add commentHeader">
+                        <input id="commentText" type="text" class="form-control mr-3" placeholder="Add commentText">
+                        <button id="submit-comment" class="btn btn-primary" type="button">Comment</button>
+                    </div>
+                    <div class="comment-list"></div>
+                    @if (comments != null && comments.Count() > 0)
+                    {
+                        @foreach (var item in comments)
+                        {
+                            <div class="commented-section mt-2">
+                                <div class="d-flex flex-row align-items-center commented-user">
+                                    <h5 class="mr-2">@item.Name</h5>
+                                    <span class="dot mb-1" style="margin: 0 10px;"></span>
+                                    <span class="mb-1 ml-2">@TimeHelper.GetTimeCommentAgo(item.CommentTime)</span>
+                                </div>
+                                <div class="comment-text-sm"><span>@item.CommentHeader</span></div>
+                                <div class="comment-text-sm"><span>@item.CommentText</span></div>
+                                <div class="reply-section">
+                                    <div class="d-flex flex-row align-items-center voting-icons">
+                                        <h6 class="ml-2 mt-1">Like</h6>
+                                        <h6 class="ml-2 mt-1" style="margin-left: 10px;">Reply</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Divider-->
+                            <hr class="my-4" />
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer-->
+    <partial name="_PartialFooter" />
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    @*<script src="js/scripts.js"></script>*@
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="~/js/commentInput.js"></script>
+</body>
+</html>
+
